@@ -1,6 +1,6 @@
 import db from './db';
 
-export const FeaturedProducts = async () => {
+export const fetchFeaturedProducts = async () => {
     const products = await db.product.findMany({
         where: {
             featured: true
@@ -14,7 +14,7 @@ export const fetchAllProducts = () =>{
         {
             orderBy: {
                 name: 'desc'
-            }
+            } 
         }
     );
 }
